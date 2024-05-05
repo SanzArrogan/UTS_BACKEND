@@ -1,0 +1,110 @@
+<!-- views/pitcher.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission</title>
+    <style>
+body {
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    background-image: url('/pic/bg1.jpg');
+}
+
+.container {
+    margin: 10% auto; /* Mengatur margin secara otomatis untuk tetap berada di tengah */
+    padding: 20px;
+    background-color: rgba(242, 242, 242, 0.7); /* Warna latar belakang transparan */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.5s ease;
+    max-width: 600px; /* Lebar maksimum container */
+}
+
+form {
+    width: 100%;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: "Roboto", serif; /* Font family untuk input */
+}
+
+input[type="text"]:hover,
+textarea:hover {
+    border-color: #999; /* Efek hover pada input */
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #525252;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #353635;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>SALURKAN IDE ANDA</h1>
+        <form action="/submit_pitcher" method="POST">
+            <div class="form-group">
+                <label for="name">Nama:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Nomor Telepon:</label>
+                <input type="text" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="idea">Ide:</label>
+                <textarea id="idea" name="idea" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="funding">Dana yang dibutuhkan:</label>
+                <input type="text" id="funding" name="funding" required>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

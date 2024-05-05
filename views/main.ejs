@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Role</title>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Mencegah scroll pada halaman */
+    background-image: url('/pic/bg.jpg');
+    background-size: cover; /* Memastikan gambar latar belakang menutupi seluruh area */
+    background-position: center; /* Memposisikan gambar latar belakang ke tengah */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw; /* Lebar dan tinggi container 100% dari viewport */
+    flex-direction: column;
+}
+
+.box {
+    width: 70%; /* Mengubah lebar kotak menjadi 70% dari container */
+    height: 30vh; /* Mengubah tinggi kotak menjadi 30% dari viewport */
+    border: 2px solid #333;
+    margin: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Menempatkan tulisan di tengah kotak */
+    text-decoration: none; /* Menghapus garis bawah default pada tautan */
+    color: #333; /* Warna teks */
+    background-color: rgba(240, 240, 240, 0.7); /* Warna latar belakang transparan */
+}
+
+.box:hover {
+    background-color: rgba(204, 204, 204, 0.7); /* Warna latar belakang transparan saat dihover */
+}
+
+h1 {
+    margin: 0; /* Menghapus margin default untuk h1 */
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/pitcher" class="box">
+            <h1>Pitcher</h1>
+        </a>
+        <a href="/investor" class="box">
+            <h1>Investor</h1>
+        </a>
+    </div>
+</body>
+</html>
